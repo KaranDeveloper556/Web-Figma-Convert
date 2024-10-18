@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+@keyframes RocketAnimeCss {
+  0% {
+    top: -4rem;
+  }
+
+  50% {
+    top: -2rem;
+  }
+
+  100% {
+    top: -4rem;
+  }
+}
+
+@keyframes NftAnimeCss {
+  0% {
+    bottom: -4rem;
+  }
+
+  50% {
+    bottom: -2rem;
+  }
+
+  100% {
+    bottom: -4rem;
+  }
+}

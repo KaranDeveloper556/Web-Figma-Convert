@@ -29,20 +29,20 @@ const Navigation = () => {
       gsap.from('.ul-wapper', {
         x: 80,
         opacity: 0,
-        duration: .6,
+        duration: .2,
         stagger: -0.2,
       });
       gsap.from('#Navlinks .border-b-2', {
         x: 80,
         opacity: 0,
-        duration: .6,
+        duration: .2,
         delay: .4,
         stagger: -0.2,
       });
       gsap.from('.auth-btn-mobile button', {
         y: 80,
         opacity: 0,
-        duration: 1,
+        duration: .6,
         delay: .8,
         stagger: -0.4,
       });
@@ -54,7 +54,6 @@ const Navigation = () => {
       gsap.from('#logo-box', {
         y: -20,
         opacity: 0,
-        delay: .2,
         duration: 1,
       })
 
@@ -63,7 +62,7 @@ const Navigation = () => {
       NavTimeline.from('#Navlinks a', {
         y: -40,
         opacity: 0,
-        duration: .8,
+        duration: .4,
         stagger: -0.10
       })
 
@@ -71,14 +70,12 @@ const Navigation = () => {
         y: -20,
         opacity: 0,
         duration: 1,
-        delay: .5,
         stagger: -0.20
       })
 
       gsap.from('#menu', {
         y: -20,
         opacity: 0,
-        delay: .2,
         duration: 1,
       })
     }

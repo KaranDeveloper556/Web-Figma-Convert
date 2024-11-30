@@ -1,8 +1,11 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
 const Button = ({ value, icon, righticon, onclick, tailwindclass }) => {
   return (
-    <button
+    <motion.button
+    whileHover={{ scale: 1.2 }}
+    whileTap={{ scale: 0.80 }}
       onClick={onclick}
       className={`p-2 px-3 li:text-lg flex justify-center items-center gap-2 bg-indigo-600 font-semibold text-white rounded-xl hover:bg-indigo-700 ${tailwindclass}`}
       aria-label={value} // Accessibility improvement
@@ -10,7 +13,7 @@ const Button = ({ value, icon, righticon, onclick, tailwindclass }) => {
       {icon && <span>{icon}</span>}
       <span>{value}</span>
       {righticon && <span>{righticon}</span>}
-    </button>
+    </motion.button>
   );
 };
 

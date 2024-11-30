@@ -1,5 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from 'gsap'
+import { motion } from "motion/react";
+
+
 import Tag from './../common/Tag';
 import Button from '../common/Button';
 import { MdOutlineArrowOutward } from "react-icons/md";
@@ -21,20 +24,20 @@ const HeroSection = () => {
       gsap.from('.intro .slogan', {
         y: -40,
         scale: 0,
-        delay:.6,
+        delay: .6,
         duration: .8,
       })
       gsap.from('.intro .hero-para', {
         y: -40,
         scale: 0,
-        delay:.8,
+        delay: .8,
         duration: .8,
       })
 
       gsap.from('.intro .hero-button', {
         y: -40,
         scale: 0,
-        delay:1,
+        delay: 1,
         duration: .8,
       })
     }
@@ -54,11 +57,18 @@ const HeroSection = () => {
           <Button rigthicon={<MdOutlineArrowOutward />} value={'Get Started'} tailwindclass={'p-3 px-5'} />
         </div>
       </div>
-      <div className="relative top-[-12rem] flex images">
+      <motion.div
+        className="relative top-[-12rem] flex images"
+        initial={{ scale: 0 }}
+        animate={{
+          scale: 1,
+          transition: { delay: 1, duration: 1.5 }
+        }}
+      >
         <img src={nft} alt="nft" className='absolute bottom-[-10%] left-[-10%] h-[7rem] sm:h-[14rem] md:h-[16rem] animate-nftAnime z-[10]' />
         <img src={codeImg} alt="code" className='relative h-[12rem] vsm:h-[18rem] sm:h-[25rem] md:h-[30rem] xl:h-[35rem] rounded-[5%]' />
         <img src={rocket} alt="nft" className='absolute top-[-10%] right-[-10%] h-[7rem] sm:h-[14rem] animate-rocketAnime z-[10]' />
-      </div>
+      </motion.div>
 
     </section>
   )
